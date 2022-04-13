@@ -1,8 +1,8 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     //Show scroll to top button
     $(".scrollToTop").fadeOut(10);
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         if ($(this).scrollTop() > 500) {
             $(".scrollToTop").fadeIn(1000);
         } else {
@@ -11,7 +11,7 @@ $(document).ready(function () {
     });
 
     //Animate to the top of the page
-    $(".scrollToTop").click(function () {
+    $(".scrollToTop").click(function() {
         $("html,body").animate({
             scrollTop: 0
         }, 1000)
@@ -77,7 +77,7 @@ $(document).ready(function () {
 //end of jquery
 
 const mobileButton = document.querySelector(".c-burger-container")
-const navMenu      = document.querySelector(".c-main-navigation-container")
+const navMenu = document.querySelector(".c-main-navigation-container")
 mobileButton.addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("c-active")
     navMenu.classList.toggle("c-active")
@@ -85,25 +85,25 @@ mobileButton.addEventListener("click", (e) => {
 
 
 // Animations on scroll
-let sectionAbout  = document.querySelector(".c-section-about-us");
-let sectionFaq    = document.querySelector(".c-section-faq");
-let sectionBlog   = document.querySelector(".c-blog-section");
+let sectionAbout = document.querySelector(".c-section-about-us");
+let sectionFaq = document.querySelector(".c-section-faq");
+let sectionBlog = document.querySelector(".c-blog-section");
 let sectionFooter = document.querySelector("#c-footer");
 
 window.addEventListener("scroll", (e) => {
-    
-if(e.currentTarget.pageYOffset >= sectionAbout.offsetTop / 1.3) {
-    sectionAbout.classList.add("animate__animated", "animate__fadeInUp")
-}
-if(e.currentTarget.pageYOffset >= sectionFaq.offsetTop / 1.3) {
-    sectionFaq.classList.add("animate__animated", "animate__fadeInUp")
-}
-if(e.currentTarget.pageYOffset >= sectionBlog.offsetTop / 1.3) {
-    sectionBlog.classList.add("animate__animated", "animate__fadeInUp")
-}
-if(e.currentTarget.pageYOffset >= sectionFooter.offsetTop / 1.3) {
-    sectionFooter.classList.add("animate__animated", "animate__fadeInUp")
-}
+
+    if (e.currentTarget.pageYOffset >= sectionAbout.offsetTop / 1.3) {
+        sectionAbout.classList.add("animate__animated", "animate__fadeInUp")
+    }
+    if (e.currentTarget.pageYOffset >= sectionFaq.offsetTop / 1.3) {
+        sectionFaq.classList.add("animate__animated", "animate__fadeInUp")
+    }
+    if (e.currentTarget.pageYOffset >= sectionBlog.offsetTop / 1.3) {
+        sectionBlog.classList.add("animate__animated", "animate__fadeInUp")
+    }
+    if (e.currentTarget.pageYOffset >= sectionFooter.offsetTop / 1.3) {
+        sectionFooter.classList.add("animate__animated", "animate__fadeInUp")
+    }
 
 
 
