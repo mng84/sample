@@ -240,6 +240,12 @@ h5 {
 
 /* End of general rules */
 
+.c-section-about-us,
+.c-section-faq,
+.c-blog-section,
+#c-footer {
+    opacity: 0;
+}
 
 /* Main nanigation */
 
@@ -623,7 +629,7 @@ footer:before {
     }
     .c-section-about-us {
         margin-top: 50px;
-        padding: 0px 15px;
+        padding: 0px 30px;
     }
 
     .c-btn-medium-v3.c-btn-about-us {
@@ -632,18 +638,18 @@ footer:before {
     .c-col-n-p-l {
         padding-left: 15px;
     }
-     .c-testimonial-content {
-        margin: 30px 0px;
-    }
     .c-section-faq {
         margin: 40px 0px;
+    }
+    .c-testimonial-content {
+        margin: 30px 0px;
     }
     .c-faq-button {
         width: 300px;
     }
     .c-grid-container.c-testimonial-grid {
         width: 100%;
-        padding: 0px;
+        padding: 0px 29px;
     }
     .c-section.c-blog-section {
         padding: 10px 0px;
