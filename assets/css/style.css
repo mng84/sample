@@ -632,6 +632,9 @@ footer:before {
     .c-col-n-p-l {
         padding-left: 15px;
     }
+     .c-testimonial-content {
+        margin: 30px 0px;
+    }
     .c-section-faq {
         margin: 40px 0px;
     }
