@@ -64,17 +64,47 @@ $(document).ready(function () {
         }
     });
 
-    var WOW = new WOW;
-    WOW.init();
+    // wow = new WOW({
+    //     animateClass: 'animated',
+    //     offset: 100,
+    //     callback: function (box) {
+    //         console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+    //     }
+    // });
+    // wow.init();
 
 });
-
 //end of jquery
 
-
 const mobileButton = document.querySelector(".c-burger-container")
-const navMenu = document.querySelector(".c-main-navigation-container")
+const navMenu      = document.querySelector(".c-main-navigation-container")
 mobileButton.addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("c-active")
     navMenu.classList.toggle("c-active")
+})
+
+
+// Animations on scroll
+let sectionAbout  = document.querySelector(".c-section-about-us");
+let sectionFaq    = document.querySelector(".c-section-faq");
+let sectionBlog   = document.querySelector(".c-blog-section");
+let sectionFooter = document.querySelector("#c-footer");
+
+window.addEventListener("scroll", (e) => {
+    
+if(e.currentTarget.pageYOffset >= sectionAbout.offsetTop / 2) {
+    sectionAbout.classList.add("animate__animated", "animate__fadeInUp")
+}
+if(e.currentTarget.pageYOffset >= sectionFaq.offsetTop / 2) {
+    sectionFaq.classList.add("animate__animated", "animate__fadeInUp")
+}
+if(e.currentTarget.pageYOffset >= sectionBlog.offsetTop / 2) {
+    sectionBlog.classList.add("animate__animated", "animate__fadeInUp")
+}
+if(e.currentTarget.pageYOffset >= sectionFooter.offsetTop / 2) {
+    sectionFooter.classList.add("animate__animated", "animate__fadeInUp")
+}
+
+
+
 })
