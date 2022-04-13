@@ -63,16 +63,6 @@ $(document).ready(function() {
             }
         }
     });
-
-    // wow = new WOW({
-    //     animateClass: 'animated',
-    //     offset: 100,
-    //     callback: function (box) {
-    //         console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-    //     }
-    // });
-    // wow.init();
-
 });
 //end of jquery
 
@@ -82,7 +72,6 @@ mobileButton.addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("c-active")
     navMenu.classList.toggle("c-active")
 })
-
 
 // Animations on scroll
 let sectionAbout = document.querySelector(".c-section-about-us");
@@ -105,6 +94,26 @@ window.addEventListener("scroll", (e) => {
         sectionFooter.classList.add("animate__animated", "animate__fadeInUp")
     }
 
+    // Safari support
 
+    let isSafari = navigator.vendor.match(/apple/i) &&
+        !navigator.userAgent.match(/crios/i) &&
+        !navigator.userAgent.match(/fxios/i) &&
+        !navigator.userAgent.match(/Opera|OPT\//);
 
+    if (isSafari) {
+
+        if (e.pageYOffset >= sectionAbout.offsetTop / 1.3) {
+            sectionAbout.classList.add("animate__animated", "animate__fadeInUp")
+        }
+        if (e.pageYOffset >= sectionFaq.offsetTop / 1.3) {
+            sectionFaq.classList.add("animate__animated", "animate__fadeInUp")
+        }
+        if (e.pageYOffset >= sectionBlog.offsetTop / 1.3) {
+            sectionBlog.classList.add("animate__animated", "animate__fadeInUp")
+        }
+        if (e.pageYOffset >= sectionFooter.offsetTop / 1.3) {
+            sectionFooter.classList.add("animate__animated", "animate__fadeInUp")
+        }
+    }
 })
