@@ -92,16 +92,16 @@ let sectionFooter = document.querySelector("#c-footer");
 
 window.addEventListener("scroll", (e) => {
     
-if(e.currentTarget.pageYOffset >= sectionAbout.offsetTop / 1.2) {
+if(e.currentTarget.pageYOffset >= sectionAbout.offsetTop / 1.3) {
     sectionAbout.classList.add("animate__animated", "animate__fadeInUp")
 }
-if(e.currentTarget.pageYOffset >= sectionFaq.offsetTop / 1.2) {
+if(e.currentTarget.pageYOffset >= sectionFaq.offsetTop / 1.3) {
     sectionFaq.classList.add("animate__animated", "animate__fadeInUp")
 }
-if(e.currentTarget.pageYOffset >= sectionBlog.offsetTop / 1.2) {
+if(e.currentTarget.pageYOffset >= sectionBlog.offsetTop / 1.3) {
     sectionBlog.classList.add("animate__animated", "animate__fadeInUp")
 }
-if(e.currentTarget.pageYOffset >= sectionFooter.offsetTop / 1.2) {
+if(e.currentTarget.pageYOffset >= sectionFooter.offsetTop / 1.3) {
     sectionFooter.classList.add("animate__animated", "animate__fadeInUp")
 }
 
